@@ -3,3 +3,4 @@ Add session and HttpClient setup in program.cs
 Add RacedayApiClient to send requests with API session cookie
 Add registration page and AuthController
 Add login page and store userid
+Add logout and clear session
