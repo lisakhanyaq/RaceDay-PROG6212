@@ -1,2 +1,3 @@
 Configure API base URL in appsettings
 Add session and HttpClient setup in program.cs
+Add RacedayApiClient to send requests with API session cookie
