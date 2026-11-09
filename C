@@ -9,3 +9,4 @@ Add role checks and redirects for protected pages
 Build organiser dashboard with event summaries
 Add delete event
 Add organiser enrolment
+Add results entry for enrolled partcipants
