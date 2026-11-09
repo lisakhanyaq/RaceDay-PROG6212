@@ -7,3 +7,4 @@ Add logout and clear session
 Add role aware navigation in shared layout
 Add role checks and redirects for protected pages
 Build organiser dashboard with event summaries
+Add delete event
