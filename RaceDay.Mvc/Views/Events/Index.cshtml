@@ -1,0 +1,66 @@
+﻿@model List<RaceDay.Mvc.ViewModels.EventViewModel>
+
+@{
+    ViewData["Title"] = "Events";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<h1>Upcoming Events</h1>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Distance</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.EventDate.ToShortDateString()</td>
+                    <td>@item.Location</td>
+                    <td>@item.DistanceKm km</td>
+                    <td>@item.EventType</td>
+
+                    <td>
+                        <a class="btn btn-warning btn-sm"
+                           asp-action="Edit"
+                           asp-route-id="@item.EventId">
+                            Edit
+                        </a>
+
+                        <a class="btn btn-danger btn-sm"
+                           asp-action="Delete"
+                           asp-route-id="@item.EventId">
+                            Delete
+                        </a>
+                        <a class="btn btn-primary btn-sm"
+                           asp-action="Details"
+                           asp-route-id="@item.EventId">
+                            View
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+
+</table>
