@@ -10,3 +10,4 @@ Build organiser dashboard with event summaries
 Add delete event
 Add organiser enrolment
 Add results entry for enrolled partcipants
+Add participant upcoming events page with filters
